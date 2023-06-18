@@ -1,0 +1,269 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-family: 'Fira Code', monospace;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+    background-color:rgba(0, 0, 0, 0.915);
+}
+
+svg{
+    width: 20%;
+    height: 10%;
+}
+.header-logo--wrapper {
+    display: flex;
+    align-items: center;
+    color: white;
+    border-right: 1px solid white;
+    width: 35%;
+    flex-wrap: nowrap;
+}
+
+
+nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    appearance: none;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: .3rem;
+    padding: .4rem;
+    transition: .2s all;
+}
+nav a:hover {
+    background-color: rgba(247, 247, 247, 0.238);
+    transform: translateX(5px);
+}
+
+#searchInput {
+    width: 30%;
+    height: 10%;
+    padding: .25rem;
+}
+#searchInput:focus {
+    outline: none;
+    border: 2px solid orange
+}
+
+.goods-wrapp {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.goods {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.good {
+    width: 30%;
+    border: 1px solid #0000001d;
+    box-shadow: 0px 0px 26px -9px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: .35s all;
+}
+
+
+
+.good:hover{
+    transform: scale(1.015);
+    box-shadow: 0px 0px 26px -9px rgba(0, 0, 0, 0.408);
+}
+
+.good img {
+    width: 80%;
+}
+
+.good-addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.add-to-cart-btn  {
+    border:  none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 1rem 0 0 1rem;
+    padding: .5rem;
+}
+
+.add-to-cart-btn:hover {
+    border: 2px solid orange;
+}
+
+.good-counter {
+    background-color: black;
+    border-radius: 4px 1rem 1rem 4px;
+    width: 16%;
+    padding-top: .55rem;
+    padding-bottom: .55rem;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.good-counter:focus {
+    outline: none;
+    border: 2px solid orange
+}
+
+.good-counter::after, .good-counter::before {
+    content: "";
+    background-color: orange;
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    transition: .45s;
+    cursor: pointer;
+}
+
+.good-counter:hover:after {
+    transform: scale(1.055) translateY(-80%);
+}
+.good-counter:hover:before {
+    transform: scale(1.055) translateY(80%);
+}
+
+
+.good-counter::after {
+    border-radius: 1rem 1rem 0 0;
+    top: 0;
+    left: 25%;
+    transform: translateY(-65%);
+}
+.good-counter::before {
+    border-radius: 0 0 1rem 1rem ;
+    bottom: 0;
+    left: 25%;
+    transform: translateY(65%);
+}
+
+
+
+/* --------------------Корзина---------------------------- */
+#cartTable {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: collapse;
+} 
+
+tr, td, th{
+    border-collapse: collapse;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.quantityCell {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.quantBtn {
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.order-box {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.order-box--addon {
+    display: flex;
+
+}
+
+.order-box--addon .order-btn, a {
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    border-radius: .5rem;
+    appearance: none;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    transition: .35s all;
+    cursor: pointer;
+
+}
+
+.order-box--addon .order-btn:hover, a:hover {
+    background-color: #979797;
+    transform: scale(.95);
+}
+
+.order-box--addon .order-btn {
+    margin-right: 1rem;
+}
+
+
+/* --------------------Иконка корзины и счетчик---------------------- */
+.cart-icon {
+    position: relative;
+    display: block;
+}
+.cart-icon img {
+    filter: invert(100%);
+    transition: .35s all;
+}
+.cart-icon:hover>img {
+    transform: scale(.9);
+}
+
+#cartIndicator {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 890px) {
+    * {
+        font-size: 12px;
+    }
+}

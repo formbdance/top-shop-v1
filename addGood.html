@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Good</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="goods" style="display: none;"></div>
+        <div id="cartIndicator" style="display: none;"></div>
+        <input type="text" id="searchInput" style="display: none;">
+        <h1>Добавление нового товара</h1>
+        <form id="add-product-form">
+            <label for="image-path">Изображение</label>
+            <input type="file" id="image-path" required><br>
+            <label for="name">Название</label>
+            <input type="text" id="name" required><br>
+            <label for="description">Описание</label>
+            <textarea id="description" required></textarea><br>
+            <label for="price">Цена</label>
+            <input type="number" id="price" required><br>
+            <button type="submit">Добавить</button>
+        </form>
+        <a href="admin.html">Панель администратора</a>
+        <a href="market.html">Вернуться в каталог</a>
+    </div>
+
+    <script type="module" src="addGood.js"></script>
+</body>
+</html>

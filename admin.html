@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Панель администратора</h1>
+        <hr>
+        <nav>
+            <a href="addGood.html">Добавить товар</a>
+            <a href="#" onclick="delitems()" >Удалить товары</a>
+            <a href="#">Добавить новость</a>
+        </nav>
+        <hr>
+        <a href="market.html">Перейти в каталог</a>
+    </div>
+
+    <script>
+        function delitems() {
+            localStorage.setItem("goods", 0);
+        }
+    </script>
+</body>
+</html>

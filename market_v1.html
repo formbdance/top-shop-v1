@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" href="market.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Интернет-магазин</h1>
+        <hr>
+        <h2>Каталог</h2>
+        <hr>
+        <div class="goods">
+            <div class="good">
+                <img src="images/cap.jpg" alt="good1">
+                <h2>Кепка</h2>
+                <p>Хорошая кепка Vans, черный цвет, хлопок 100%</p>
+                <p>Цена: 50$</p>
+                <button onclick="addToCart('Кепка', 50)">Добавить в корзину</button>
+            </div>
+            <div class="good">
+                <img src="images/jacket.jpg" alt="good2">
+                <h2>Куртка</h2>
+                <p>Зимний пуховик, зеленый цвет, натуральный гусиный пух</p>
+                <p>Цена: 250$</p>
+                <button onclick="addToCart('Куртка', 250)">Добавить в корзину</button>
+            </div>
+            <div class="good">
+                <img src="images/shirt.jpg" alt="good3">
+                <h2>Рубашка</h2>
+                <p>Рубашка с коротким рукавом, голубой цвет, лён 100%</p>
+                <p>Цена: 80$</p>
+                <button onclick="addToCart('Рубашка', 80)">Добавить в корзину</button>
+            </div>
+            <div class="good">
+                <img src="images/shorts.jpg" alt="good4">
+                <h2>Шорты</h2>
+                <p>Шорты с карманами, цвет хаки, хлопок 100%</p>
+                <p>Цена: 75$</p>
+                <button onclick="addToCart('Шорты', 75)">Добавить в корзину</button>
+            </div>
+            <div class="good">
+                <img src="images/tshirt.jpg" alt="good5">
+                <h2>Футболка</h2>
+                <p>Футболка, оранжевый цвет, хлопок 100%</p>
+                <p>Цена: 30$</p>
+                <button onclick="addToCart('Футболка', 30)">Добавить в корзину</button>
+            </div>
+        </div>
+        <hr>
+        <h2>Корзина</h2>
+        <hr>
+        <div class="cart">
+            <ul id="cart-item"></ul>
+            <p id="total-price">Общая стоимость: 0$</p>
+            <button>Оформить заказ</button>
+        </div>
+    </div>
+    
+
+    <script src="market.js"></script>
+</body>
+</html>
